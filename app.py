@@ -1,8 +1,11 @@
 from flask import Flask
 import os
+
 app = Flask(__name__)
+
 # Simple in-memory counter (resets on restart)
 visits = 0
+
 @app.route('/')
 def index():
     global visits
@@ -25,5 +28,6 @@ def index():
     </body>
     </html>
     '''
-if name == '__main__':
+
+if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
