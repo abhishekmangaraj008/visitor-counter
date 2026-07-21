@@ -5,7 +5,7 @@ app = Flask(__name__)
  
 # Simple in-memory counter (resets on restart)
 visits = 0
- 
+
 @app.route('/')
 def index():
     global visits
